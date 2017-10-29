@@ -1,0 +1,7 @@
+﻿  funct.cpp
+c:\users\юрий\documents\visual studio 2015\projects\consoledrive\consoledrive\funct.cpp(75): warning C4018: '<': signed/unsigned mismatch
+c:\users\юрий\documents\visual studio 2015\projects\consoledrive\consoledrive\funct.cpp(82): warning C4018: '<': signed/unsigned mismatch
+  ConsoleGame.cpp
+  Generating Code...
+  ConsoleDrive.vcxproj -> C:\Users\Юрий\Documents\Visual Studio 2015\Projects\ConsoleDrive\Debug\ConsoleDrive.exe
+  ConsoleDrive.vcxproj -> C:\Users\Юрий\Documents\Visual Studio 2015\Projects\ConsoleDrive\Debug\ConsoleDrive.pdb (Full PDB)
