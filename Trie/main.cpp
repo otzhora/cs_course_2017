@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <ctime>
 using namespace std;
 
 struct node
@@ -9,6 +10,14 @@ struct node
     node *link;
     node *next;
     int len;
+
+    node()
+    {
+        len = 0;
+        link = NULL;
+        next = NULL;
+        key = NULL;
+    }
 
     node(char *str, int n): len(n)
     {
@@ -69,12 +78,13 @@ node* insert(node* t, char* key, int n=0)
 
 node* find(node* t, char* key, int n=0)
 {
+    //cout << key << "---";
     if(!n) n = strlen(key);
     if(!t) return 0;
     int x = prefix(t->key, t->len, key, n);
     if(x == 0) return find(t->next, key, n);
     if(x == n) return t;
-    if(x == t->len) return find(t->link, key, n);
+    if(x == t->len) return find(t->link, key+x, n-x);
     return 0;
 }
 
@@ -111,6 +121,8 @@ char* make_word(char* word)
 
 int main(int argc, char **argv)
 {
+
+    // TODO: переписать все
     if(argc == 1)
     {
         cerr << "vvedi imya fila" << endl;
@@ -119,21 +131,23 @@ int main(int argc, char **argv)
 
     ifstream in(argv[1]);
     char word[200];
-
-    node* head = new node("", 0);
+    in >> word;
+    double t_start = clock();
+    node* head = new node(make_word(word), strlen(word));
 
     while(in >> word)
     {
         insert(head, make_word(word));
     }
-
+    double t_end = clock();
+    cout << "build took: " << (t_end - t_start) / CLOCKS_PER_SEC << endl;
     //print(head);
 
 
     while(true){
         cout << "enter word you want to check: ";
         cin >> word;
-        cout << endl;
+        //cout << make_word(word) << endl;
 
         if(strcmp(word, "end") == 0) break;
 
