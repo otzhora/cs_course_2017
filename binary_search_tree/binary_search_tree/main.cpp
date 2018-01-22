@@ -8,8 +8,19 @@
 
 #include <iostream>
 
+#include "bin_search_tree.h"
+using namespace std;
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    tree t;
+    int n, buf;
+    cin >> n;
+    for(int i = 0; i < n; i++){
+        cin >> buf;
+        t.insert(buf);
+    }
+    
+    cout << t;
+    
     return 0;
 }
