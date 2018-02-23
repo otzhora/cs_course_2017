@@ -17,7 +17,7 @@ int main(){
     }
 
     print(a);
-    q_sort(a);
+    merge_sort(a);
     print(a);
 
     return 0;
