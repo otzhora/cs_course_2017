@@ -4,6 +4,7 @@
 #include <stack>
 #include <string> 
 
+#include "gtest/gtest.h"
 using namespace std;
 
 int main(int argc, char** argv){
@@ -14,7 +15,7 @@ int main(int argc, char** argv){
 
     if(is_correct(argv[1]))
         cout << "expression is correct!" << endl;
-    else cerr << "expression is not correct" << endl;
-
-    return 0;
+    else cout << "expression is not correct" << endl;
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
