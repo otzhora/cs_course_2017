@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A4B6B38204A972F00512DAD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B6B37204A972F00512DAD /* main.cpp */; };
+		3A4B6B3F204A9E4A00512DAD /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4B6B3E204A9E4A00512DAD /* gtest.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		3A4B6B34204A972F00512DAD /* bracket+gtest_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "bracket+gtest_test"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4B6B37204A972F00512DAD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3A4B6B3E204A9E4A00512DAD /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gtest.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4B6B3F204A9E4A00512DAD /* gtest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,7 @@
 		3A4B6B36204A972F00512DAD /* bracket+gtest_test */ = {
 			isa = PBXGroup;
 			children = (
+				3A4B6B3E204A9E4A00512DAD /* gtest.framework */,
 				3A4B6B37204A972F00512DAD /* main.cpp */,
 			);
 			path = "bracket+gtest_test";
@@ -233,6 +237,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/bracket+gtest_test",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +249,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/bracket+gtest_test",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

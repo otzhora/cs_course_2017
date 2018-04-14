@@ -79,6 +79,4 @@ namespace {
 
         EXPECT_EQ(higlight_vars("(avar1+bder1)-c12*(12+24)"), test_set);
     }
-
-    
 }
