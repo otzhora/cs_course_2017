@@ -5,16 +5,21 @@
 #include <vector>
 using namespace std;
 
-int sum(int* a, int* b){
-    *a = *a + *b;
-    return 0;
-}
-
 int main()
 {  
-    int a = 0, b = 0;
-    cin >> a >> b;
-    sum(&a, &b);
-    cout << a << endl;
+    vector<vector<int>> x(10, vector<int> (10) );
+    for(int i = 0; i < 10; i++) {
+        for(int j = 0; j < 10; j++) {
+            x[i][j] = j + 1;
+        }
+        random_shuffle(x[i].begin(), x[i].end());
+    }
+    
+    for(int i = 0; i < 10; i++) {
+        for(int j = 0; j < 10; j++) {
+            cout << x[i][j] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }

@@ -24,4 +24,5 @@ DerivedData/
 !default.perspectivev3
 
 *.out
+.vscode
 
