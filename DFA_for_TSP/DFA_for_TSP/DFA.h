@@ -63,7 +63,7 @@ private:
             bool mark = false;
             
             for(int j = 0; j < n - 1; j++) {
-                if((ffs[f1][i] == ffs[f2][j] && ffs[f1][i+1] == ffs[f2][j+1]) || (ffs[f1][i] == ffs[f2][j+1] && ffs[f1][i+1] == ffs[f2][j])) {
+                if(ffs[f1][i] == ffs[f2][j] && ffs[f1][i+1] == ffs[f2][j+1]){//} || (ffs[f1][i] == ffs[f2][j+1] && ffs[f1][i+1] == ffs[f2][j])) {
                     mark = true;
                     break;
                 }
@@ -108,7 +108,7 @@ private:
         for(int i = 0; i < n - 1; i++) {
             bool mark = false;
             for(int j = 0; j < n - 1; j++) {
-                if((ffs[f2][i] == ffs[f1][j] && ffs[f2][i+1] == ffs[f1][j + 1]) || (ffs[f2][i] == ffs[f1][j+1] && ffs[f2][i+1] == ffs[f1][j])) {
+                if(ffs[f2][i] == ffs[f1][j] && ffs[f2][i+1] == ffs[f1][j + 1]){//} || (ffs[f2][i] == ffs[f1][j+1] && ffs[f2][i+1] == ffs[f1][j])) {
                     mark = true;
                     break;
                 }
@@ -302,6 +302,7 @@ private:
         for(int i = 0; i < n; i++) {
             ans[i] = ffs[f1][i];
         }
+        
         int xi = rand()%n;
         int xj = rand()%n;
         swap(ans[xi], ans[xj]);
@@ -346,7 +347,7 @@ private:
             bool mark = false;
             
             for(int j = 0; j < n - 1; j++) {
-                if((ffs[f1][i] == ffs[f2][j] && ffs[f1][i+1] == ffs[f2][j+1]) || (ffs[f1][i] == ffs[f2][j+1] && ffs[f1][i+1] == ffs[f2][j])) {
+                if(ffs[f1][i] == ffs[f2][j] && ffs[f1][i+1] == ffs[f2][j+1]){//|| (ffs[f1][i] == ffs[f2][j+1] && ffs[f1][i+1] == ffs[f2][j])) {
                     mark = true;
                     break;
                 }
@@ -355,7 +356,7 @@ private:
             if(!mark) A++;
         }
         
-        int xi = rand() % A + 2;
+        int xi = rand() % (A+1) + 2;
         int p1 = rand() % n;
         int p2 = min((int)n-1, p1 + xi);
         firefly ans;

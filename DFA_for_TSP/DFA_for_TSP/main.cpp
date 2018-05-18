@@ -18,9 +18,9 @@ typedef pair<double, double> city;
 int main(int argc, const char * argv[]) {
     srand((unsigned int) time(NULL));
     
-    vector<city> test(read_test("ul16.txt"));
+    vector<city> test(read_test("gr202.txt"));
     
-    DFA tcp(test, 5000, 5, 11, 0.007);
+    DFA tcp(test, 1000, 10, 80, 0.007);
     cout << tcp.solove_EDFA() << endl;
     return 0;
 }
