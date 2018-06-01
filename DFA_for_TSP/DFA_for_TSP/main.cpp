@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
     
     vector<city> test(read_test("gr202.txt"));
     
-    DFA tcp(test, 1000, 10, 80, 0.007);
-    cout << tcp.solove_EDFA() << endl;
+    DFA tcp(test, 5000, 10, 80, 0.007);
+    cout << tcp.solove() << endl;
     return 0;
 }
